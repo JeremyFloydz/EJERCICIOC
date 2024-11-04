@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejec.HelloController">
+    <children>
+        <VBox prefHeight="242.0" prefWidth="164.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="nombreField" VBox.vgrow="ALWAYS"> <!-- Campo para Nombre -->
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="apellidosField"> <!-- Campo para Apellidos -->
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edad">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="edadField" prefHeight="24.0" prefWidth="220.0" VBox.vgrow="ALWAYS"> <!-- Campo para Edad -->
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <Button fx:id="agregarButton" mnemonicParsing="false" text="Agregar Persona" /> <!-- Botón para agregar -->
+            </children>
+            <FlowPane.margin>
+                <Insets left="30.0" top="100.0" />
+            </FlowPane.margin>
+        </VBox>
+        <VBox prefHeight="369.0" prefWidth="462.0">
+            <FlowPane.margin>
+                <Insets top="30.0" />
+            </FlowPane.margin>
+            <children>
+                <TableView fx:id="tableView" prefHeight="370.0" prefWidth="462.0"> <!-- Tabla para mostrar las personas -->
+                    <columns>
+                        <TableColumn fx:id="nombreColumn" prefWidth="150.0" text="Nombre" /> <!-- Columna para Nombre -->
+                        <TableColumn fx:id="apellidosColumn" prefWidth="150.0" text="Apellidos" /> <!-- Columna para Apellidos -->
+                        <TableColumn fx:id="edadColumn" prefWidth="150.0" text="Edad" /> <!-- Columna para Edad -->
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+        <HBox prefHeight="53.0" prefWidth="658.0">
+            <children>
+                <Button fx:id="modificarButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Modificar"> <!-- Botón para Modificar -->
+                    <HBox.margin>
+                        <Insets left="270.0" top="11.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="eliminarButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Eliminar"> <!-- Botón para Eliminar -->
+                    <HBox.margin>
+                        <Insets left="120.0" top="11.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</FlowPane>
